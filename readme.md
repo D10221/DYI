@@ -47,3 +47,15 @@ Not implemented:
 - ssr page routing
 - authentication
 - everything else
+
+Develop:  
+Poors peolple live/hot/reload:
+
+Dev Server:  
+
+    # yarn start # nodemon .
+
+Hot reload (AKA F5):  
+<small><i>Editor -> alt+tab+F5</i></small>
+
+    # yarn watch # tsc -p . --watch
