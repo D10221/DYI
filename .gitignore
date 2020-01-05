@@ -1,0 +1,8 @@
+**/node_modules/*
+**/.vscode/*
+*.lock
+*.log
+*.zip
+*.tar.gz
+**/build/*
+**/built/*
