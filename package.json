@@ -5,16 +5,20 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf build/",
-    "build": "tsc -p .",
-    "rebuild": "rm -rf build/ && tsc -p .",
-    "watch": "tsc -p . --watch",
-    "rewatch": "rm -rf build/ && tsc -p . --watch",
-    "start": "nodemon ."
+    "build": "rimraf build && tsc -p .",
+    "watch": "rimraf build && tsc -p . --watch",
+    "start": "nodemon .",
+    "start:ts": "nodemon -r ts-node/register .",
+    "test": "cd test && node -r ts-node/register -r esm --experimental-modules ../node_modules/jest/bin/jest.js ."
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
+    "@types/jest": "^24.0.25",
+    "esm": "^3.2.25",
+    "jest": "^24.9.0",
     "nodemon": "^2.0.2",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.6.1",
     "typescript": "^3.7.3"
   },
   "dependencies": {
