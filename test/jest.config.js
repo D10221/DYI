@@ -1,6 +1,6 @@
 module.exports = {
   preset: "ts-jest",
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
   plugins: ["@babel/plugin-syntax-dynamic-import"],
   globals: {
     "ts-jest": {

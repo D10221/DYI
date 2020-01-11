@@ -37,6 +37,7 @@ Implements:
 - Routing (client side)
     - not a router
 - SSR (jsx -> string)
+- CSS in JS
 
 Not implemented:  
 - Schedulers  
