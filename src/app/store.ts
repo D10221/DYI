@@ -8,6 +8,7 @@ export const actionTypes = {
   SET_MESSAGE: `${STORE_KEY}/SET_MESSAGE`,
   FETCH_START: `${STORE_KEY}/FETCH_START`,
   FETCH_COMPLETED: `${STORE_KEY}/FETCH_COMPLETED`,
+  SET_THEME: `${STORE_KEY}/SET_THEME`
 };
 //
 export const defaultState = {
@@ -15,12 +16,19 @@ export const defaultState = {
   busy: false,
   error: undefined as any,
   things: [] as Thing [],
+  theme: "light" as "light"|"dark",
 };
 //
 export type State = typeof defaultState;
 //
 export const reducer = (state = defaultState, action: Action) => {
   switch (action.type) {
+    case actionTypes.SET_THEME: {
+      return {
+        ...state,
+        theme: action.payload
+      }
+    }
     case actionTypes.SET_MESSAGE:
       return {
         ...state,
@@ -60,6 +68,10 @@ export const reducer = (state = defaultState, action: Action) => {
 };
 //
 export const actions = {
+  setTheme:(theme: "light"|"dark")=>({
+    type: actionTypes.SET_THEME,
+    payload: theme
+  }),
   setMessage: (message: string): Action => ({
     type: actionTypes.SET_MESSAGE,
     payload: message,
