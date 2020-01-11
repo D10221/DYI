@@ -7,7 +7,7 @@ import store from "./store.js";
 const render = () => {
   Render(
     <App>
-      <pre style="color: pink;">
+      <pre >
         {JSON.stringify(store.getState(), null, 2)}
       </pre>
     </App>,

@@ -12,6 +12,7 @@ const links = [
   { href: "./#click", label: "Click" },
   { href: "./#things", label: "things" },  
 ];
+
 const App: Component<State & Actions> = async ({
   message,
   things,
